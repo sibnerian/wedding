@@ -1,25 +1,28 @@
 .image-card {
-  height: 491px;
-  .image {
-    opacity: 0.5;
-    height: 491px;
+  height: 100vh;
+
+  &.card {
+    border-radius: 0;
+    border: none;
   }
+
   .no-padding {
     padding: 0;
   }
+
   .intro-text {
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
+
     .intro-text-no-button {
-      background-color: rgba(73, 80, 87, 0.05);
+      background-color: rgba(73, 80, 87, 0.1);
       text-shadow: 2px 2px #adb5bd;
-      display:inline-block;
+      display: inline-block;
       border-radius: 75px;
-      padding-top: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 40px 35px 10px;
     }
+
     .intro-heading {
       font-size: 60px;
       font-weight: 300;
@@ -27,6 +30,7 @@
       margin-bottom: 10px;
       @include script-font;
     }
+
     .intro-lead-in {
       font-size: 22px;
       font-weight: 200;
@@ -35,6 +39,7 @@
       @include heading-font;
     }
   }
+
   .date {
     font-size: 30px;
     font-weight: 200;
@@ -42,15 +47,13 @@
     margin-bottom: 50px;
   }
 }
+
 @media (min-width: 768px) {
   .image-card {
-    height: 759px;
-    .image {
-      height: 759px;
-    }
     .intro-text {
-      padding-top: 200px;
-      padding-bottom: 200px;
+      margin-top: 80px;
+      padding: 20px;
+
       .intro-heading {
         font-size: 100px;
         font-weight: 300;
@@ -58,11 +61,13 @@
         margin-bottom: 10px;
         @include script-font;
       }
+
       .intro-lead-in {
         font-size: 30px;
         line-height: 40px;
         @include heading-font
       }
+
       .date {
         font-size: 45px;
         margin-bottom: 200px;

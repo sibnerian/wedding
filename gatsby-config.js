@@ -1,65 +1,67 @@
-const path = require("path");
-const { title, keywords, description, author, defaultLang, trackingId } = require("./config/site");
+const path = require('path');
+
+if (process.env.ENVIRONMENT !== 'production') {
+  require('dotenv').config();
+}
+
+const contentfulConfig = {
+  spaceId: process.env.SPACE_ID,
+  accessToken: process.env.ACCESS_TOKEN,
+};
 
 module.exports = {
   siteMetadata: {
-    title,
-    keywords,
-    description,
-    author,
+    title: 'Sara & Ian',
+    keywords: ['Sara Dornblaser', 'Ian Sibner'],
+    description: "Sara Dornblaser and Ian Sibner's wedding website",
+    author: 'Sara Dornblaser & Ian Sibner',
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId,
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS_TOKEN, // Google Analytics / GA
+        ],
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: title,
-        short_name: "Caitlin & Justin",
-        start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#9ebc9f",
-        display: "minimal-ui",
-        icon: "content/assets/images/favicon.png",
+        name: 'Sara & Ian',
+        short_name: 'Sara & Ian',
+        description: "Sara and Ian's wedding website",
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#9ebc9f',
+        display: 'minimal-ui',
+        icon: 'static/favicon.png', // This path is relative to the root of the site.
       },
     },
-    "gatsby-transformer-remark",
+    'gatsby-transformer-remark',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "markdown",
-        path: `${__dirname}/content`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/content/assets/images`,
-      },
-    },
-    "gatsby-plugin-eslint",
-    "gatsby-plugin-react-helmet",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-sass",
-      options: {
-        data: `@import "core.scss";`,
-        includePaths: [path.resolve(__dirname, "src/style")],
+        name: 'images',
+        path: `${__dirname}/content/images`,
       },
     },
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-sass',
       options: {
-        langKeyDefault: defaultLang,
-        useLangKeyLayout: false,
-        pagesPaths: ["/content/"],
+        additionalData: '@import "core.scss";',
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, 'src/style')],
+        },
       },
     },
   ],
