@@ -67,5 +67,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "serve": "gatsby serve",
     "testbuild": "yarn test && yarn build"
+  },
+  "devDependencies": {
+    "@types/recompose": "^0.30.10"
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { scroller, animateScroll } from 'react-scroll';
 
 const useSmoothScrollTo = (anchorOrPosition: number | string, options = {}) => {
-  const opts = { smooth: 'easeInOutQuart', ...options };
+  const opts = { smooth: 'easeOutCubic', ...options };
 
   const handleScrollTo = React.useCallback(() => {
     switch (typeof anchorOrPosition) {

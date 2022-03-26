@@ -1,0 +1,52 @@
+@import '../Navbar/variables.scss';
+
+.map-container {
+  min-height: calc(100vh - $navbar-height);
+  width: 100vw;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.location-description-container {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 400px;
+  background-color: white;
+  padding: 24px 20px 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+
+  h1 {
+    font-size: 3em;
+    @include script-font;
+  }
+
+  p {
+    font-size: 1.125em;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: 140px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .location-description-container {
+    position: relative;
+    width: auto;
+    top: unset;
+    right: unset;
+  }
+}

@@ -8,7 +8,7 @@ type Props = {
   seo: SEOProps;
 };
 
-const anchors = ['Sara', 'Ian', 'Doggos'];
+const anchors = [{ to: 'map', text: 'Details' }];
 const frontMatter = {
   brand: 'Sara & Ian',
   menuText: 'Menu',

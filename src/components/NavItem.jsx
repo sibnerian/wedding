@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Nav } from "react-bootstrap";
-import { Link } from "react-scroll";
+import { Nav } from 'react-bootstrap';
+import { Link } from 'react-scroll';
 
-import "./NavItem.scss";
+import './NavItem.scss';
 
 const NavItem = ({ to, onClick, children }) => {
   return (
@@ -14,7 +14,9 @@ const NavItem = ({ to, onClick, children }) => {
         activeClass="active"
         to={to}
         spy
-        smooth="easeInOutQuart"
+        duration={100}
+        isDynamic
+        smooth="easeOutQuint"
         onClick={onClick}
       >
         {children || to}
@@ -30,7 +32,7 @@ NavItem.propTypes = {
 };
 
 NavItem.defaultProps = {
-  to: "",
+  to: '',
   onClick: null,
   children: null,
 };

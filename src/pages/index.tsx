@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { useStaticQuery, graphql } from 'gatsby';
 import Top from '../views/Top';
+import Map from '../views/Map';
 
 export default function IndexPage() {
   const {
@@ -22,7 +23,8 @@ export default function IndexPage() {
   );
   return (
     <Layout seo={{ keywords, description }}>
-      <Top header="Coming soon!" subheader="Check back later." />
+      <Top header="Sara & Ian<br>are getting married!" subheader="09.24.2022 • Philadelphia, PA" />
+      <Map />
     </Layout>
   );
 }
