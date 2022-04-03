@@ -6,8 +6,8 @@ const Map = () => (
     <div className="location-description-container">
       <h1>Time & Place</h1>
       <p>
-        The ceremony and reception will take place from 5:30pm–11:00pm at the beautiful Philadelphia
-        Cricket Club in Chestnut Hill.
+        The ceremony and reception will take place from <strong>5:30pm–11:00pm</strong> at the
+        beautiful <strong>Philadelphia Cricket Club</strong> in Chestnut Hill.
       </p>
     </div>
     <iframe
