@@ -28,13 +28,21 @@ const Story = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={{ span: 4, offset: 1 }} xs={12}>
+          <Col
+            lg={{ span: 4, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 1 }}
+            className="image-col"
+          >
             <Img
               fluid={hornDuoImageSharp.fluid}
               alt="Ian and Sara french horn duo pic from high school"
             />
           </Col>
-          <Col lg={{ span: 5, offset: 1 }} xs={12}>
+          <Col
+            lg={{ span: 5, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 2 }}
+            className="content-col"
+          >
             <h2>High School Sweethearts</h2>
             <p>
               Sara and Ian first met in middle school honors band, where they both played French
@@ -52,9 +60,12 @@ const Story = () => {
             </p>
           </Col>
         </Row>
-        <br />
         <Row>
-          <Col lg={{ span: 5, offset: 1 }} xs={12}>
+          <Col
+            lg={{ span: 5, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 2 }}
+            className="content-col"
+          >
             <h2>Bright College Days</h2>
             <p>
               Ian moved to Philadelphia in 2012 for college, and Sara followed a year later in 2013.
@@ -73,11 +84,40 @@ const Story = () => {
               with h,she got a revenge dog, Luna.
             </p>
           </Col>
-          <Col lg={{ span: 4, offset: 1 }} xs={12}>
+          <Col
+            lg={{ span: 4, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 1 }}
+            className="image-col"
+          >
             <Img
               fluid={hornDuoImageSharp.fluid}
               alt="Ian and Sara french horn duo pic from high school"
             />
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            lg={{ span: 4, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 1 }}
+            className="image-col"
+          >
+            <Img
+              fluid={hornDuoImageSharp.fluid}
+              alt="Ian and Sara french horn duo pic from high school"
+            />
+          </Col>
+          <Col
+            lg={{ span: 5, offset: 1, order: 0 }}
+            xs={{ span: 12, order: 2 }}
+            className="content-col"
+          >
+            <h2>Lorem Ipsum</h2>
+            <p>
+              Content. Content. Content. Content. Content. Content. Content. Content. Content.
+              Content. Content. Content. Content. Content. Content. Content. Content. Content.
+              Content. Content. Content. Content. Content. Content. Content. Content. Content.
+              Content. Content. Content. Content. Content.
+            </p>
           </Col>
         </Row>
       </Container>

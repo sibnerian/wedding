@@ -3,8 +3,12 @@
 .story-container {
   width: 100vw;
   position: relative;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  margin-top: 3em;
+
+  .content-col,
+  .image-col {
+    margin-bottom: 5em;
+  }
 
   h1 {
     @include script-font;

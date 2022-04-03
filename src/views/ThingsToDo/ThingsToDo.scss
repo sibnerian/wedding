@@ -3,8 +3,7 @@
 .things-to-do-container {
   width: 100vw;
   position: relative;
-  padding-top: 3em;
-  padding-bottom: 4em;
+  margin-bottom: 4em;
 
   h1 {
     @include script-font;
@@ -14,6 +13,8 @@
 }
 
 .option-container {
+  margin-bottom: 4em;
+
   .name {
     font-size: 22px;
     padding-bottom: 12px;
