@@ -8,7 +8,13 @@ type Props = {
   seo: SEOProps;
 };
 
-const anchors = [{ to: 'map', text: 'Details', offset: /* $navbar-height */ -56 }];
+const NAVBAR_HEIGHT_OFFSET = -56;
+
+const anchors = [
+  { to: 'story', text: 'Story', offset: NAVBAR_HEIGHT_OFFSET },
+  { to: 'map', text: 'Details', offset: NAVBAR_HEIGHT_OFFSET },
+  { to: 'accommodations', text: 'Accommodations', offset: NAVBAR_HEIGHT_OFFSET },
+];
 const frontMatter = {
   brand: 'Sara & Ian',
   menuText: 'Menu',
