@@ -6,7 +6,14 @@ import { Link } from 'react-scroll';
 
 import './NavItem.scss';
 
-const NavItem = ({ to, onClick, children, offset }) => {
+const NavItem = ({ href, to, onClick, children, offset }) => {
+  if (href) {
+    return (
+      <Nav.Item>
+        <Nav.Link href={href}>{children}</Nav.Link>
+      </Nav.Item>
+    );
+  }
   return (
     <Nav.Item>
       <Link
@@ -31,10 +38,12 @@ NavItem.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.any,
   offset: PropTypes.number,
+  href: PropTypes.string,
 };
 
 NavItem.defaultProps = {
   to: '',
+  href: null,
   onClick: null,
   children: null,
 };

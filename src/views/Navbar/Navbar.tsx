@@ -8,7 +8,7 @@ import useWindowOnScroll from '../../hooks/useWindowOnScroll';
 import './Navbar.scss';
 
 export type Props = {
-  anchors: { to: string; text: string }[];
+  anchors: { to?: string; text: string; offset?: number; href?: string }[];
   frontmatter: { brand: React.ReactNode; menuText: string };
   extraItems?: any;
 };
@@ -54,8 +54,8 @@ export default function Navbar({ anchors, frontmatter, extraItems }: Props) {
         </BootstrapNavbar.Toggle>
         <BootstrapNavbar.Collapse>
           <Nav className="text-uppercase ml-auto">
-            {anchors.map(({ to, text, offset }) => (
-              <NavItem key={to} to={to} onClick={closeMenu} offset={offset}>
+            {anchors.map(({ to, text, offset, href }) => (
+              <NavItem key={to} to={to} onClick={closeMenu} offset={offset} href={href}>
                 {text}
               </NavItem>
             ))}
