@@ -54,8 +54,8 @@ export default function Navbar({ anchors, frontmatter, extraItems }: Props) {
         </BootstrapNavbar.Toggle>
         <BootstrapNavbar.Collapse>
           <Nav className="text-uppercase ml-auto">
-            {anchors.map(({ to, text }) => (
-              <NavItem key={to} to={to} onClick={closeMenu}>
+            {anchors.map(({ to, text, offset }) => (
+              <NavItem key={to} to={to} onClick={closeMenu} offset={offset}>
                 {text}
               </NavItem>
             ))}

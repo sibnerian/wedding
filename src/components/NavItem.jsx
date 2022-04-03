@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 import './NavItem.scss';
 
-const NavItem = ({ to, onClick, children }) => {
+const NavItem = ({ to, onClick, children, offset }) => {
   return (
     <Nav.Item>
       <Link
@@ -18,6 +18,7 @@ const NavItem = ({ to, onClick, children }) => {
         isDynamic
         smooth="easeOutQuint"
         onClick={onClick}
+        offset={offset}
       >
         {children || to}
       </Link>
@@ -29,6 +30,7 @@ NavItem.propTypes = {
   to: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.any,
+  offset: PropTypes.number,
 };
 
 NavItem.defaultProps = {

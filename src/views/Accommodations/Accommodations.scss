@@ -1,0 +1,65 @@
+@import '../Navbar/variables.scss';
+
+.accommodations-container {
+  width: 100vw;
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  h1 {
+    @include script-font;
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+.option-container {
+  .name {
+    font-size: 22px;
+    padding-bottom: 12px;
+    font-style: italic;
+  }
+
+  .address {
+    @include serif-font;
+    font-size: 16px;
+    padding-top: 6px;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+
+    p {
+      margin-bottom: 2px;
+    }
+  }
+
+  .blurb {
+    font-size: 18px;
+  }
+
+  .cta {
+    margin-top: 18px;
+    font-size: 24px;
+    border: 1px solid $gray-600;
+    background: $primary;
+    color: $gray-100;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+}
+
+$option-padding: 48px;
+
+@media (min-width: 768px) {
+  .option-container {
+    padding: 0 $option-padding/2;
+  }
+
+  .option-container:first-of-type {
+    padding: 0 0 0 $option-padding;
+  }
+
+  .option-container:last-of-type {
+    padding: 0 $option-padding 0 0;
+  }
+}

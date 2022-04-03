@@ -17,7 +17,8 @@
 
     .intro-text-no-button {
       background-color: rgba(73, 80, 87, 0.1);
-      background: radial-gradient(circle, rgba(73, 80, 87, 0) 0%, rgba(73, 80, 87, 0.1) 50%, rgba(73, 80, 87, 0) 100%);      text-shadow: 1px 1px #adb5bd;
+      background: radial-gradient(circle, rgba(73, 80, 87, 0) 0%, rgba(73, 80, 87, 0.1) 50%, rgba(73, 80, 87, 0) 100%);
+      text-shadow: 1px 1px #adb5bd;
       display: inline-block;
       border-radius: 500px;
       padding: 60px 40px 10px;
@@ -36,14 +37,14 @@
       font-weight: 200;
       line-height: 22px;
       margin-top: 30px;
-      @include heading-font;
+      @include serif-font;
     }
   }
 
   .date {
     font-size: 30px;
     font-weight: 200;
-    @include heading-font;
+    @include serif-font;
     margin-bottom: 50px;
   }
 }
@@ -65,7 +66,7 @@
       .intro-lead-in {
         font-size: 36px;
         line-height: 48px;
-        @include heading-font
+        @include serif-font;
       }
 
       .date {

@@ -17,8 +17,14 @@
   }
 
   .navbar-brand {
-    color: $primary !important;
     @include script-font;
+    color: $primary !important;
+    line-height: 1;
+    font-size: 1.75em !important;
+
+    // Adjust for the FUCKING LIGATURE
+    padding-top: 0 !important;
+    padding-bottom: 5px !important;
 
     &.active,
     &:active,

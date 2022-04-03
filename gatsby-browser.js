@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import 'fontsource-allura';
-import 'fontsource-parisienne';
+import '@fontsource/rouge-script';
+import '@fontsource/bitter';
