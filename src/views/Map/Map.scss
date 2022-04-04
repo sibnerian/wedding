@@ -33,6 +33,18 @@
   p {
     font-size: 1.125em;
   }
+
+  .cta {
+    margin-top: 8px;
+    font-size: 28px;
+    border: 1px solid $gray-600;
+    background: $primary;
+    color: $gray-100;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {

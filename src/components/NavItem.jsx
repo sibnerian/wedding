@@ -10,7 +10,9 @@ const NavItem = ({ href, to, onClick, children, offset }) => {
   if (href) {
     return (
       <Nav.Item>
-        <Nav.Link href={href}>{children}</Nav.Link>
+        <Nav.Link target="_blank" href={href}>
+          {children}
+        </Nav.Link>
       </Nav.Item>
     );
   }
