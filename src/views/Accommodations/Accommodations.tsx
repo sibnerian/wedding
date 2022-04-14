@@ -29,7 +29,7 @@ const Accommodations = () => (
                 </div>
               </EqualHeightElement>
               <div>
-                <a href="www.my-event.hilton.com/phlphhf-dsw-263b5af4-538b-4bd8-a65f-b5ea8a0dcfbf/">
+                <a href="https://www.my-event.hilton.com/phlphhf-dsw-263b5af4-538b-4bd8-a65f-b5ea8a0dcfbf/">
                   <div className="cta">Book now</div>
                 </a>
               </div>
