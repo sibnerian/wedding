@@ -152,7 +152,7 @@ const Story = () => {
         </Row>
         <Row>
           <Col
-            lg={{ span: 4, offset: 1, order: 0 }}
+            lg={{ span: 4, offset: 1, order: 1 }}
             xs={{ span: 12, order: 1 }}
             className="image-col"
           >
