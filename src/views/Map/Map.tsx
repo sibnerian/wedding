@@ -6,7 +6,7 @@ const Map = () => (
     <div className="location-description-container">
       <h1>Time & Place</h1>
       <p>
-        The ceremony and reception will take place from <strong>5:30pm–11:00pm</strong> at the
+        The ceremony and reception will take place from <strong>5:00pm–10:00pm</strong> at the
         beautiful <strong>Philadelphia Cricket Club</strong> in Chestnut Hill.
       </p>
       <a href="https://saraandiantietheknot.anrsvp.com">
