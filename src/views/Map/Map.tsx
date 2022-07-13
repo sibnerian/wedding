@@ -9,6 +9,13 @@ const Map = () => (
         The ceremony and reception will take place from <strong>5:00pm–10:00pm</strong> at the
         beautiful <strong>Philadelphia Cricket Club</strong> in Chestnut Hill.
       </p>
+      <p>
+        We kindly ask that guests wear{' '}
+        <strong>
+          <a href="https://www.brides.com/cocktail-attire-wedding-4844364">cocktail attire</a>
+        </strong>
+        . Gentlemen should wear ties.
+      </p>
       <a href="https://saraandiantietheknot.anrsvp.com">
         <div className="cta">RSVP</div>
       </a>
