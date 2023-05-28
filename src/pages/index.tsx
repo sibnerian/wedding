@@ -26,11 +26,11 @@ export default function IndexPage() {
   );
   return (
     <Layout seo={{ keywords, description }}>
-      <Top header="Sara & Ian<br>are getting married!" subheader="09.24.2022 • Philadelphia, PA" />
+      <Top header="Sara & Ian<br>got married!" subheader="09.24.2022 • Philadelphia, PA" />
       <Story />
-      <Map />
+      {/* <Map />
       <Accommodations />
-      <ThingsToDo />
+      <ThingsToDo /> */}
     </Layout>
   );
 }

@@ -18,7 +18,7 @@ export default function ImageCard({ className, imageAlt, header, subheader, chil
     file: { childImageSharp },
   } = useStaticQuery(graphql`
     query ImageQuery {
-      file(relativePath: { eq: "proposal_vertical.jpg" }) {
+      file(relativePath: { eq: "ian_and_sara_in_a_wheat_field_type_thing.jpeg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
@@ -49,3 +49,4 @@ export default function ImageCard({ className, imageAlt, header, subheader, chil
     </Card>
   );
 }
+// https://baronephoto.pic-time.com/fldRlNAS2oAKV
